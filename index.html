@@ -1,0 +1,132 @@
+<!-- Created by 𝖆𝖘𝖍𝖚𝖙𝖔𝖘𝖍 𝕶𝖚𝖒𝖆𝖗 𝕾𝖎𝖓𝖌𝖍 -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="author" content="Rishu">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>happy Bday 💕</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Berkshire Swash">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./New folder/css/stylesam4.css">
+  <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"> -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9">
+  </script>
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+  <section class="fixed loader" onclick="playMusic()">
+    <div class="loader_content">
+      <img src="https://storage.ning.com/topology/rest/1.0/file/get/2736358853?profile=original" alt="">
+      <h1>Loading...</h1>
+      <button class="continue" onclick="showPage()">Continue 👉</button>
+    </div>
+  </section>
+  <section class="fixed sec1">
+    <div class="summary">
+      <img
+        src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c935271c-a13c-4aa8-b5c3-02f5ab6f0459/dbm8ywv-7399c2eb-bf98-49a6-9049-c590604ce0ac.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvYzkzNTI3MWMtYTEzYy00YWE4LWI1YzMtMDJmNWFiNmYwNDU5XC9kYm04eXd2LTczOTljMmViLWJmOTgtNDlhNi05MDQ5LWM1OTA2MDRjZTBhYy5naWYifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.Fhh_3-lVRg3AfNeULJkBf7UhqdU_n7tC8qfNI8xkgqw">
+      <h1>Happy Birthday</h1>
+      <p>May you be gifted with life’s biggest joys and never-ending bliss. After all, you yourself are a gift to earth,
+        so you deserve the best. Happy birthday</p>
+      <button onclick="nextPage()">WISH👉</button>
+    </div>
+    <div class="heart">
+      <img src="https://i.gifer.com/4M57.gif" alt="">
+    </div>
+  </section>
+
+  <section class="sec2">
+    <div class="container">
+      <div class="img">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL1qAaGGAyJVaI7PowCjpSeYigjy-k4vFqlQIoUfo6VLM1d65C&s"
+          alt="">
+      </div>
+      <div class="content">
+        <h1>💕Tripti💕</h1>
+        <p>May you be gifted with life’s biggest joys and never-ending bless. After all, you yourself are a gift to
+          earth, so you deserve the best. Happy birthday</p>
+        <a class="btn" onclick="warning()">yourGIFT🎁</a>
+      </div>
+      <!-- <video id="video" loop poster="https://1.bp.blogspot.com/-jl6gdpk9YEY/XZcQEK2pg2I/AAAAAAAAC48/k5peRSKRPZ0B29e7O8mxzVryXEpyrrkegCNcBGAsYHQ/s1600/attitude%2Bgirl%2Bhd%2Bpic%2Bdownload.jpg" >
+  <source src="https://videosongstatus.com/30sec-status-video/13ZEtF94Lnm.mp4" >
+</video> -->
+      <div class="overlay" onclick="playMusic()"></div>
+      <div>
+  </section>
+  <audio id="music" loop src="https://mobcup.net/d/7qbc4t0p/mp3"></audio>
+  <audio src="https://mobcup.net/d/b4oo7c0p/mp3" loop id="music2"></audio>
+  <!-- script -->
+  <script>
+    const video = document.getElementById("video");
+    const loader = document.querySelector(".loader");
+    const music = document.getElementById("music");
+    window.addEventListener('load', function () {
+      hideLoad()
+    });
+    setTimeout(() => hideLoad(), 14000)
+    function hideLoad() {
+      document.querySelector(".loader_content h1").style.display = "none";
+      document.querySelector(".continue").classList.add("show");
+
+    }
+    function showPage() {
+      loader.style.opacity = "0";
+      playMusic();
+      setTimeout(() => {
+        loader.style.display = "none";
+      }, 600)
+      video.load()
+    }
+    function playMusic() {
+      if (music.paused) {
+        music.play()
+      }
+    }
+    function nextPage() {
+      document.querySelector(".sec1").style.opacity = "0";
+      music.pause()
+      setTimeout(() => {
+        document.querySelector(".sec1").style.display = "none";
+        document.querySelector(".sec2").style.display = "flex";
+        music2.play()
+      }, 700)
+    }
+
+    // parijavascript
+    const div = document.querySelector(".container");
+    setInterval(makeButterfly, 300);
+    function makeButterfly() {
+      const butterfly = document.createElement("b");
+      butterfly.innerHTML = "🦋";
+      butterfly.classList.add("fly");
+      butterfly.style.left = Math.random() * window.innerWidth + "px";
+      butterfly.style.animationDuration = Math.random() * 4 + 5 + "s";
+      butterfly.style.opacity = Math.random();
+      butterfly.style.fontsize = Math.random() * 15 + 10 + "px";
+      div.appendChild(butterfly);
+      setTimeout(() => butterfly.remove(), 8000)
+    }
+
+    // ayush javascript
+    // <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9">
+
+    function warning() {
+      Swal.fire({
+        icon: 'error',
+        title: '😂😅 क्या लोगी अब जी 😅😂',
+        html: 'Aacha bata do kya chahiye 4 - 5 saal me job karne lagenge to de hi denge.',
+        footer: 'made with ❤️ by Rishu | &copy2021'
+      });
+    }
+
+  </script>
+</body>
+
+</html>
